@@ -1,7 +1,7 @@
 from telegram import Update
 from telegram.ext import ApplicationBuilder, MessageHandler, filters, ContextTypes
-
-BOT_TOKEN = "8692136697:AAE23peQZXyZvd8DRxQYoZzFmWfM8KxpDAQ"
+import os
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 
 # Message auto delete function
 async def delete_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
